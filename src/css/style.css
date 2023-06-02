@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins';
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: white;
+}
+
+.cabecalho .logo {
+    width: 75px;
+}
+
+.cabecalho .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabecalho nav li a {
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+    font-size: 20px;
+}
+
+.cabecalho nav li a:hover {
+    background-color: #07b4ed;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 142px);
+    padding: 0 30px 30px;
+}
+
+.container .imagem-titulo {
+    width: 375px;
+    height: 68,75px;
+}
+
+.container .descricao {
+    color: #a8bdd7;
+    width: 85%;
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+.container .botao-trailer {
+    background-color: #0040ff;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+    border-radius: 28px;
+}
+
+.container div button:hover {
+    transform: scale(1.1);
+    background-color: #07b4ed;
+}
+
+.container div button:active {
+    position: relative;
+	top: 1px;
+}
+
+.fundo-video {
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    max-zoom:30%;
+    border-style:hidden;
+}
+
+.fundo-video .video {
+
+  -moz-transform:scale(1.5);
+  -webkit-transform:scale(1.5);
+  -o-transform:scale(1.5);
+  -ms-transform:scale(1.5);
+  transform:scale(1.5);
+}
+
+.fundo-video::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,1) 100%);
+}
+
+.modal {
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52,52,50,0.749);
+    visibility: hidden;
+}
+
+.conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.fechar-modal {
+    position: static;
+    right: auto;
+    background-color: white;
+    color: #0040ff;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.modal iframe {
+    border-width: 0;
+    width: 640;
+    height: 360;
+}
+
+.modal.aberto {
+    opacity: 1;
+    visibility: visible;
+}
